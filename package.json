@@ -1,0 +1,24 @@
+{
+  "name": "tik-tok-mern-app",
+  "version": "1.0.0",
+  "description": "Tik tok MERN App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix client"
+  },
+  "author": "Edward Li",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.3",
+    "package-js": "^1.0.0",
+    "pagerank-js": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
