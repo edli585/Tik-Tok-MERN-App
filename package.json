@@ -14,6 +14,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "html-react-parser": "^3.0.12",
     "mongoose": "^6.8.3",
     "package-js": "^1.0.0",
     "pagerank-js": "^0.3.0"

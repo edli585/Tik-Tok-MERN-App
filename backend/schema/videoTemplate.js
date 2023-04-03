@@ -11,7 +11,7 @@ const vidSchema = mongoose.Schema({
     },
     videoname: {
         type: String,
-        required: [true, "Pleas add the video's name"]
+        required: [true, "Please add the video's name"]
     }
 })
 

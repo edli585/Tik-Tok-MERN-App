@@ -17,9 +17,9 @@ async function computeWinner(n) {
     let tolerance = 0.0001;
 
     let results = await Pagerank(nodes, linkProb, tolerance);
-    //console.log(results);
+    console.log("Ranking:", results);
     let i = results.indexOf(Math.max(...results));
-
+    console.log("Winner is", i);
     return keyList[i];
 };
 
@@ -28,17 +28,20 @@ function makeDirectedGraph(prefs, n, keylist) {
     for(let i = 0; i < keylist.length; i++) {
         graph[keylist[i]] = [];
     }
-
+    
     for(let i = 0; i < prefs.length; i++) {
         let b = prefs[i].better;
         let w = prefs[i].worse;
         graph[w].push(b);
     }
+    console.log("Graph:", graph);
+
 
     let translate = {};
     for(let i = 0; i < keylist.length; i++) {
         translate[keylist[i]] = i;
     }
+    console.log("Translate:", translate);
 
     const adjList = [];
     for(let i = 0; i < keylist.length; i++) {
@@ -47,6 +50,7 @@ function makeDirectedGraph(prefs, n, keylist) {
         let newoutgoing = outgoing.map((x) => translate[x]);
         adjList.push(newoutgoing);
     }
+    console.log("Adjlist:", adjList);
     return adjList;
 };
 
